@@ -4,7 +4,7 @@
 // @namespace     CTLD
 // @description   Adds a toggle button to check accessibility issues (WCAG 2.1 AA) on Canvas pages.
 // @author        CTLD
-// @updateurl     https://msudenver.instructure.com/files/20821942/download
+// @updateurl     https://raw.githubusercontent.com/waustin-MSUD/userscriptsforcanvas/refs/heads/main/AccessibilityChecker.user.js
 // @icon          https://du11hjcvx0uqb.cloudfront.net/br/dist/images/favicon-e10d657a73.ico
 // @match         https://msudenver.instructure.com/courses/*/pages/*
 // @match         https://msudenver.instructure.com/courses/*/assignments/*
