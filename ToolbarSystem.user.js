@@ -4,7 +4,7 @@
 // @namespace     CTLD
 // @description   Universal floating toolbar for Canvas LMS userscripts.
 // @author        CTLD
-// @updateurl
+// @updateurl     https://raw.githubusercontent.com/waustin-MSUD/userscriptsforcanvas/refs/heads/main/ToolbarSystem.user.js
 // @icon          https://du11hjcvx0uqb.cloudfront.net/br/dist/images/favicon-e10d657a73.ico
 // @match         https://*.instructure.com/*
 // @grant         GM_addStyle
