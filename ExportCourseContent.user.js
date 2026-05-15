@@ -4,7 +4,7 @@
 // @namespace     CTLD
 // @description   Export pages, assignments, discussions, and classic quizzes (with banks) as HTML.
 // @author        CTLD
-// @updateurl
+// @updateurl     https://raw.githubusercontent.com/waustin-MSUD/userscriptsforcanvas/refs/heads/main/ExportCourseContent.user.js
 // @icon          https://du11hjcvx0uqb.cloudfront.net/br/dist/images/favicon-e10d657a73.ico
 // @match         https://*/courses/*/modules
 // @match         https://*/courses/*/modules?*
