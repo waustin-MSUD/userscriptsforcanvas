@@ -4,7 +4,7 @@
 // @namespace     CTLD
 // @description   Pick a module, pick items, choose prefix/suffix/replace, preview, and apply changes.
 // @author        CTLD
-// @updateurl
+// @updateurl     https://raw.githubusercontent.com/waustin-MSUD/userscriptsforcanvas/refs/heads/main/RenameModuleItems.user.js
 // @icon          https://du11hjcvx0uqb.cloudfront.net/br/dist/images/favicon-e10d657a73.ico
 // @match         https://*.instructure.com/courses/*/modules
 // @grant         GM_addStyle
