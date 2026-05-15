@@ -4,7 +4,7 @@
 // @namespace     CTLD
 // @description   Highlight elements with lang attributes on Canvas pages in view mode only.
 // @author        CTLD
-// @updateurl
+// @updateurl     https://raw.githubusercontent.com/waustin-MSUD/userscriptsforcanvas/refs/heads/main/LangHighlightView.user.js
 // @icon          https://du11hjcvx0uqb.cloudfront.net/br/dist/images/favicon-e10d657a73.ico
 // @match         *://*.instructure.com/*
 // @match         *://canvaslms.com/*
