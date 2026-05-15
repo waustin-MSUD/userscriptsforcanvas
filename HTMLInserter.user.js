@@ -4,7 +4,7 @@
 // @namespace     CTLD
 // @description   HTML Insert button for use after cyberattacks.
 // @author        CTLD
-// @updateurl
+// @updateurl     https://raw.githubusercontent.com/waustin-MSUD/userscriptsforcanvas/refs/heads/main/HTMLInserter.user.js
 // @icon          https://du11hjcvx0uqb.cloudfront.net/br/dist/images/favicon-e10d657a73.ico
 // @match         https://msudenver.instructure.com/courses/*/pages/*/edit
 // @grant         none
