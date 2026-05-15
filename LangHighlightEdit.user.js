@@ -4,7 +4,7 @@
 // @namespace     CTLD
 // @description   Highlights elements with a language attribute in edit mode.
 // @author        CTLD
-// @updateurl
+// @updateurl     https://raw.githubusercontent.com/waustin-MSUD/userscriptsforcanvas/refs/heads/main/LangHighlightEdit.user.js
 // @icon          https://du11hjcvx0uqb.cloudfront.net/br/dist/images/favicon-e10d657a73.ico
 // @match         https://msudenver.instructure.com/courses/*/pages/*/edit
 // @grant         GM_addStyle
