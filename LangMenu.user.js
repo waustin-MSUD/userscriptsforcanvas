@@ -4,7 +4,7 @@
 // @namespace     CTLD
 // @description   Adds a menu to apply a lang attribute to selected elements.
 // @author        CTLD
-// @updateurl
+// @updateurl     https://raw.githubusercontent.com/waustin-MSUD/userscriptsforcanvas/refs/heads/main/LangMenu.user.js
 // @icon          https://du11hjcvx0uqb.cloudfront.net/br/dist/images/favicon-e10d657a73.ico
 // @match         https://*.instructure.com/courses/*/pages/*/edit
 // @match         https://*.instructure.com/courses/*/assignments/*/edit
