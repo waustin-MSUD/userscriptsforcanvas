@@ -155,6 +155,36 @@
           html: `<div style="width: 90%; border-left: solid 4px #6b6b6b; background-color: #f5f5f5; border-radius: 12px; padding: 16px 20px; margin: 20px auto;"><h3 style="color: #6b6b6b; font-size: 1.1em; font-weight: bold; margin: 0 0 8px 0;">Learning Objectives</h3><p>Content goes here.</p></div>`
         }
       ]
+    },
+    {
+        group: 'Pressbooks Lite-er',
+        snippets: [
+            {
+                key: 'exBoxLite',
+                name: '🟪 Examples',
+                html: `<div style="width: 90%; border-left: 4px solid #7a6886; background-color: #f8f5fa; padding: 16px 20px; margin: 20px auto;"><h3 style="color: #7a6886; font-size: 1.1em; margin: 0 0 8px 0;">Examples</h3><p>Content goes here.</p></div>`
+            },
+            {
+                key: 'tkBoxLite',
+                name: '🟩 Takeaways',
+                html: `<div style="width: 90%; border-left: 4px solid #4a7c59; background-color: #f3f8f5; padding: 16px 20px; margin: 20px auto;"><h3 style="color: #4a7c59; font-size: 1.1em; margin: 0 0 8px 0;">Key Takeaways</h3><p>Content goes here.</p></div>`
+            },
+            {
+                key: 'exerBoxLite',
+                name: '🟦 Exercises',
+                html: `<div style="width: 90%; border-left: 4px solid #3d6b8e; background-color: #f0f5f9; padding: 16px 20px; margin: 20px auto;"><h3 style="color: #3d6b8e; font-size: 1.1em; margin: 0 0 8px 0;">Exercises</h3><p>Content goes here.</p></div>`
+            },
+            {
+                key: 'noteBoxLite',
+                name: '🟧 Notes',
+                html: `<div style="width: 90%; border-left: 4px solid #b5722a; background-color: #fdf6f0; padding: 16px 20px; margin: 20px auto;"><h3 style="color: #88541e; font-size: 1.1em; margin: 0 0 8px 0;">Notes</h3><p>Content goes here.</p></div>`
+            },
+            {
+                key: 'obBoxLite',
+                name: '⬛ Objectives',
+                html: `<div style="width: 90%; border-left: 4px solid #6b6b6b; background-color: #f5f5f5; padding: 16px 20px; margin: 20px auto;"><h3 style="color: #6b6b6b; font-size: 1.1em; margin: 0 0 8px 0;">Learning Objectives</h3><p>Content goes here.</p></div>`
+            }
+        ]
     }
   ];
   // ─── END SNIPPETS CONFIG ───────────────────────────────────────
