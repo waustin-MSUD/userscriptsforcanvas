@@ -1,12 +1,19 @@
 // ==UserScript==
-// @name         Cleanup Spaces
-// @namespace    CTLD
-// @version      2026.06.11
-// @description  Replace nbsp with spaces and collapse multiple spaces after end-of-sentence punctuation in the Canvas RCE
-// @author       CTLD
-// @match        https://*.instructure.com/*
-// @grant        unsafeWindow
-// @run-at       document-idle
+// @name          Clean Up Spaces
+// @namespace     CTLD
+// @version       2026.05.15
+// @description   Remove &nbsp; characters and extra spaces after sentences when editing a page in Canvas.
+// @author        CTLD
+// @updateurl     https://raw.githubusercontent.com/waustin-MSUD/userscriptsforcanvas/refs/heads/main/CleanupSpaces.user.js
+// @icon          https://du11hjcvx0uqb.cloudfront.net/br/dist/images/favicon-e10d657a73.ico
+// @match         https://*.instructure.com/courses/*/pages/*/edit
+// @match         https://*.instructure.com/courses/*/assignments/*/edit
+// @match         https://*.instructure.com/courses/*/discussion_topics/*/edit
+// @match         https://*.instructure.com/courses/*/quizzes/*/edit
+// @match         https://*.instructure.com/courses/*/announcements/*/edit
+// @match         https://*.instructure.com/courses/*/assignments/syllabus
+// @grant         GM_addStyle
+// @run-at        document-idle
 // ==/UserScript==
 
 (function () {
