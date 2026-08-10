@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name          Sandbox Reset
-// @version       2026.05.15
+// @version       2026.08.10
 // @namespace     CTLD
-// @description   Bulk deletion for assignments, quizzes, discussions, announcements, modules, and rubrics in a Sandbox.
+// @description   Bulk deletion for assignments, quizzes, discussions, announcements, modules, pages, and rubrics in a Sandbox.
 // @author        CTLD
 // @updateurl     https://raw.githubusercontent.com/waustin-MSUD/userscriptsforcanvas/refs/heads/main/SandboxReset.user.js
 // @icon          https://du11hjcvx0uqb.cloudfront.net/br/dist/images/favicon-e10d657a73.ico
@@ -11,6 +11,7 @@
 // @match         https://*.instructure.com/courses/*/discussion_topics
 // @match         https://*.instructure.com/courses/*/announcements
 // @match         https://*.instructure.com/courses/*/modules
+// @match         https://*.instructure.com/courses/*/pages
 // @match         https://*.instructure.com/courses/*/rubrics
 // @grant         GM_addStyle
 // @run-at        document-idle
@@ -188,10 +189,12 @@
       matches: (p) => /\/courses\/\d+\/discussion_topics\/?$/.test(p),
       itemTypeLabel: 'discussions',
       async fetchItems(courseId) {
-        // only_announcements=false fetches regular discussions (graded and ungraded)
-        return fetchAllPages(`/api/v1/courses/${courseId}/discussion_topics`, {
-          only_announcements: false,
-        });
+        // Omit only_announcements entirely — the default returns regular discussions.
+        // Passing only_announcements=false sends the string "false", which Canvas
+        // may interpret as truthy, returning announcements instead.
+        const all = await fetchAllPages(`/api/v1/courses/${courseId}/discussion_topics`);
+        // Filter out announcements just in case
+        return all.filter((d) => !d.is_announcement);
       },
       async deleteItem(courseId, item, log) {
         await apiDelete(`/api/v1/courses/${courseId}/discussion_topics/${item.id}`);
@@ -224,6 +227,58 @@
       async deleteItem(courseId, item, log) {
         await apiDelete(`/api/v1/courses/${courseId}/modules/${item.id}`);
       },
+    },
+
+    {
+      id: 'pages',
+      label: 'Reset: Delete All Pages',
+      matches: (p) => /\/courses\/\d+\/pages\/?$/.test(p),
+      itemTypeLabel: 'pages',
+      async fetchItems(courseId) {
+        const pages = await fetchAllPages(`/api/v1/courses/${courseId}/pages`);
+        // The front page can't be deleted while it's set as front page.
+        // Move it to the end so everything else is deleted first, then
+        // attempt to delete it last (Canvas may or may not allow it).
+        const sorted = pages.sort((a, b) => {
+          if (a.front_page) return 1;
+          if (b.front_page) return -1;
+          return 0;
+        });
+        return sorted;
+      },
+      async deleteItem(courseId, item, log) {
+        if (item.front_page) {
+          // Try to unset front page first via course settings
+          try {
+            const csrf = getCSRFToken();
+            await apiFetch(`/api/v1/courses/${courseId}`, {
+              method: 'PUT',
+              headers: {
+                'Content-Type': 'application/json',
+                'X-CSRF-Token': csrf,
+              },
+              body: JSON.stringify({
+                course: { default_view: 'modules' },
+              }),
+            });
+            // Now unset the page's front_page flag
+            await apiFetch(`/api/v1/courses/${courseId}/pages/${encodeURIComponent(item.url)}`, {
+              method: 'PUT',
+              headers: {
+                'Content-Type': 'application/json',
+                'X-CSRF-Token': csrf,
+              },
+              body: JSON.stringify({
+                wiki_page: { front_page: false },
+              }),
+            });
+          } catch (err) {
+            log(`Could not unset front page: ${err.message}. Attempting delete anyway…`);
+          }
+        }
+        await apiDelete(`/api/v1/courses/${courseId}/pages/${encodeURIComponent(item.url)}`);
+      },
+      itemName: (item) => item.title || item.url || `Page ${item.page_id}`,
     },
 
     {
