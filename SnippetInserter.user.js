@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name          Snippet Inserter
-// @version       2026.08.26
+// @version       2026.08.27
 // @namespace     CTLD
 // @description   Adds menu for inserting HTML snippets from the RCE.
 // @author        CTLD
@@ -169,7 +169,7 @@
               {
                 key: 'coEx',
                 name: 'Examples',
-                html: `<div style="width: 90%; border-left: 4px solid #1e40af; background-color: #eff6ff; border-radius: 8px; padding: 16px 20px; margin: 20px auto;">
+                html: `<div style="width: 90%; border-left: 4px solid #2563eb; background-color: #eff6ff; border-radius: 8px; padding: 16px 20px; margin: 20px auto;">
   <h3 style="color: #1e3a8a; font-size: 1.1em; margin: 0 0 8px 0;">Examples</h3>
   <p>Content goes here.</p>
   </div>`
