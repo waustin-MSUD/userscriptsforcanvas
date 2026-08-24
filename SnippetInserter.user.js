@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name          Snippet Inserter
-// @version       2026.07.17
+// @version       2026.08.24
 // @namespace     CTLD
 // @description   Adds menu for inserting HTML snippets from the RCE.
 // @author        CTLD
@@ -55,11 +55,6 @@
             key: 'sBox',
             name: 'Shadow Box',
             html: `<div style="margin: 50px 15% 50px 15%; background-color: #cccccc; border-radius: 8px;"><div style="position: relative; top: -20px; left: -20px; padding: 20px; background: #ffffff; border: 2px solid #cccccc; border-radius: 8px;"><p>Content Goes Here</p></div></div>`
-          },
-          {
-            key: 'figure',
-            name: 'Figure/Caption',
-            html: `<figure><img role="presentation" src="https://picsum.photos/650/315/" alt="" /><figcaption>Paris at night | Source: Pierre Blach&eacute; from Paris, France, CC0, via Wikimedia Commons</figcaption></figure>`
           },
           {
             key: 'stToggle',
@@ -450,6 +445,231 @@
   </div>
   </div>`
               },
+              {
+                key: 'kcDialog',
+                name: 'KC — dialogs',
+                html: `<div style="max-width: 680px; margin: 24px auto; padding: 24px 28px; border-left: 5px solid #1a5276; background: #f0f6fb; border-radius: 8px;">
+    <h2 style="margin: 0 0 4px 0; font-size: 1.35rem; color: #1a5276;">Knowledge Check</h2>
+    <p style="margin: 0 0 20px 0; color: #2c3e50;">Test yourself! Try to answer the questions below without scrolling back up the page. To see if your answer is correct, click on the button below each question.</p>
+    <ol style="padding-left: 24px; margin: 0;">
+        <li style="margin-bottom: 18px;">
+            <p style="margin: 0 0 8px 0; color: #2c3e50;">Question text 1</p>
+            <div id="dialog_for_link1" class="enhanceable_content dialog" title="Answer">
+                <p>Answer 1 text</p>
+            </div>
+            <p style="margin: 0;"><a id="link1" class="Button" style="display: inline-block; background-color: #1a5276; color: #ffffff; padding: 7px 16px; border-radius: 6px; text-decoration: none; font-size: 0.9rem; font-weight: 600;" href="#dialog_for_link1">Check Your Answer #1</a></p>
+        </li>
+        <li style="margin-bottom: 18px;">
+            <p style="margin: 0 0 8px 0; color: #2c3e50;">Question text 2</p>
+            <div id="dialog_for_link2" class="enhanceable_content dialog" title="Answer">
+                <p>Answer 2 text</p>
+            </div>
+            <p style="margin: 0;"><a id="link2" class="Button" style="display: inline-block; background-color: #1a5276; color: #ffffff; padding: 7px 16px; border-radius: 6px; text-decoration: none; font-size: 0.9rem; font-weight: 600;" href="#dialog_for_link2">Check Your Answer #2</a></p>
+        </li>
+        <li style="margin-bottom: 18px;">
+            <p style="margin: 0 0 8px 0; color: #2c3e50;">Question text 3</p>
+            <div id="dialog_for_link3" class="enhanceable_content dialog" title="Answer">
+                <p>Answer 3 text</p>
+            </div>
+            <p style="margin: 0;"><a id="link3" class="Button" style="display: inline-block; background-color: #1a5276; color: #ffffff; padding: 7px 16px; border-radius: 6px; text-decoration: none; font-size: 0.9rem; font-weight: 600;" href="#dialog_for_link3">Check Your Answer #3</a></p>
+        </li>
+        <li style="margin-bottom: 18px;">
+            <p style="margin: 0 0 8px 0; color: #2c3e50;">Question text 4</p>
+            <div id="dialog_for_link4" class="enhanceable_content dialog" title="Answer">
+                <p>Answer 4 text</p>
+            </div>
+            <p style="margin: 0;"><a id="link4" class="Button" style="display: inline-block; background-color: #1a5276; color: #ffffff; padding: 7px 16px; border-radius: 6px; text-decoration: none; font-size: 0.9rem; font-weight: 600;" href="#dialog_for_link4">Check Your Answer #4</a></p>
+        </li>
+        <li style="margin-bottom: 18px;">
+            <p style="margin: 0 0 8px 0; color: #2c3e50;">Question text 5</p>
+            <div id="dialog_for_link5" class="enhanceable_content dialog" title="Answer">
+                <p>Answer 5 text</p>
+            </div>
+            <p style="margin: 0;"><a id="link5" class="Button" style="display: inline-block; background-color: #1a5276; color: #ffffff; padding: 7px 16px; border-radius: 6px; text-decoration: none; font-size: 0.9rem; font-weight: 600;" href="#dialog_for_link5">Check Your Answer #5</a></p>
+        </li>
+        <li style="margin-bottom: 18px;">
+            <p style="margin: 0 0 8px 0; color: #2c3e50;">Question text 6</p>
+            <div id="dialog_for_link6" class="enhanceable_content dialog" title="Answer">
+                <p>Answer 6 text</p>
+            </div>
+            <p style="margin: 0;"><a id="link6" class="Button" style="display: inline-block; background-color: #1a5276; color: #ffffff; padding: 7px 16px; border-radius: 6px; text-decoration: none; font-size: 0.9rem; font-weight: 600;" href="#dialog_for_link6">Check Your Answer #6</a></p>
+        </li>
+        <li>
+            <p style="margin: 0 0 8px 0; color: #2c3e50;">Question text 7</p>
+            <div id="dialog_for_link7" class="enhanceable_content dialog" title="Answer">
+                <p>Answer 7 text</p>
+            </div>
+            <p style="margin: 0;"><a id="link7" class="Button" style="display: inline-block; background-color: #1a5276; color: #ffffff; padding: 7px 16px; border-radius: 6px; text-decoration: none; font-size: 0.9rem; font-weight: 600;" href="#dialog_for_link7">Check Your Answer #7</a></p>
+        </li>
+    </ol>
+</div>`
+              },
+              {
+                key: 'kcDetails',
+                name: 'KC — details',
+                html: `<div style="max-width: 680px; margin: 24px auto; padding: 24px 28px; border-left: 5px solid #1a5276; background: #f0f6fb; border-radius: 8px;">
+    <h2 style="margin: 0 0 4px 0; font-size: 1.35rem; color: #1a5276;">Knowledge Check</h2>
+    <p style="margin: 0 0 20px 0; color: #2c3e50;">Test yourself! Try to answer the questions below without scrolling back up the page. To reveal the answer, select the button beneath each question.</p>
+    <ol style="padding-left: 24px; margin: 0;">
+        <li style="margin-bottom: 18px;">
+            <p style="margin: 0 0 8px 0; color: #2c3e50;">Question text 1</p>
+            <details>
+                <summary style="cursor: pointer; display: inline-block; list-style: none; background-color: #1a5276; color: #ffffff; padding: 7px 16px; border-radius: 6px; font-size: 0.9rem; font-weight: 600;">Check your answer</summary>
+                <div style="margin: 10px 0 0 0; padding: 12px 16px; background-color: #e4eff8; border-left: 4px solid #2980b9; border-radius: 0 4px 4px 0;">
+                    <p style="margin: 0; color: #2c3e50;">Answer 1 text</p>
+                </div>
+            </details>
+        </li>
+        <li style="margin-bottom: 18px;">
+            <p style="margin: 0 0 8px 0; color: #2c3e50;">Question text 2</p>
+            <details>
+                <summary style="cursor: pointer; display: inline-block; list-style: none; background-color: #1a5276; color: #ffffff; padding: 7px 16px; border-radius: 6px; font-size: 0.9rem; font-weight: 600;">Check your answer</summary>
+                <div style="margin: 10px 0 0 0; padding: 12px 16px; background-color: #e4eff8; border-left: 4px solid #2980b9; border-radius: 0 4px 4px 0;">
+                    <p style="margin: 0; color: #2c3e50;">Answer 2 text</p>
+                </div>
+            </details>
+        </li>
+        <li style="margin-bottom: 18px;">
+            <p style="margin: 0 0 8px 0; color: #2c3e50;">Question text 3</p>
+            <details>
+                <summary style="cursor: pointer; display: inline-block; list-style: none; background-color: #1a5276; color: #ffffff; padding: 7px 16px; border-radius: 6px; font-size: 0.9rem; font-weight: 600;">Check your answer</summary>
+                <div style="margin: 10px 0 0 0; padding: 12px 16px; background-color: #e4eff8; border-left: 4px solid #2980b9; border-radius: 0 4px 4px 0;">
+                    <p style="margin: 0; color: #2c3e50;">Answer 3 text</p>
+                </div>
+            </details>
+        </li>
+        <li style="margin-bottom: 18px;">
+            <p style="margin: 0 0 8px 0; color: #2c3e50;">Question text 4</p>
+            <details>
+                <summary style="cursor: pointer; display: inline-block; list-style: none; background-color: #1a5276; color: #ffffff; padding: 7px 16px; border-radius: 6px; font-size: 0.9rem; font-weight: 600;">Check your answer</summary>
+                <div style="margin: 10px 0 0 0; padding: 12px 16px; background-color: #e4eff8; border-left: 4px solid #2980b9; border-radius: 0 4px 4px 0;">
+                    <p style="margin: 0; color: #2c3e50;">Answer 4 text</p>
+                </div>
+            </details>
+        </li>
+        <li style="margin-bottom: 18px;">
+            <p style="margin: 0 0 8px 0; color: #2c3e50;">Question text 5</p>
+            <details>
+                <summary style="cursor: pointer; display: inline-block; list-style: none; background-color: #1a5276; color: #ffffff; padding: 7px 16px; border-radius: 6px; font-size: 0.9rem; font-weight: 600;">Check your answer</summary>
+                <div style="margin: 10px 0 0 0; padding: 12px 16px; background-color: #e4eff8; border-left: 4px solid #2980b9; border-radius: 0 4px 4px 0;">
+                    <p style="margin: 0; color: #2c3e50;">Answer 5 text</p>
+                </div>
+            </details>
+        </li>
+        <li style="margin-bottom: 18px;">
+            <p style="margin: 0 0 8px 0; color: #2c3e50;">Question text 6</p>
+            <details>
+                <summary style="cursor: pointer; display: inline-block; list-style: none; background-color: #1a5276; color: #ffffff; padding: 7px 16px; border-radius: 6px; font-size: 0.9rem; font-weight: 600;">Check your answer</summary>
+                <div style="margin: 10px 0 0 0; padding: 12px 16px; background-color: #e4eff8; border-left: 4px solid #2980b9; border-radius: 0 4px 4px 0;">
+                    <p style="margin: 0; color: #2c3e50;">Answer 6 text</p>
+                </div>
+            </details>
+        </li>
+        <li>
+            <p style="margin: 0 0 8px 0; color: #2c3e50;">Question text 7</p>
+            <details>
+                <summary style="cursor: pointer; display: inline-block; list-style: none; background-color: #1a5276; color: #ffffff; padding: 7px 16px; border-radius: 6px; font-size: 0.9rem; font-weight: 600;">Check your answer</summary>
+                <div style="margin: 10px 0 0 0; padding: 12px 16px; background-color: #e4eff8; border-left: 4px solid #2980b9; border-radius: 0 4px 4px 0;">
+                    <p style="margin: 0; color: #2c3e50;">Answer 7 text</p>
+                </div>
+            </details>
+        </li>
+    </ol>
+</div>`
+              },
+              {
+                key: 'kcMC',
+                name: 'KC — multiple choice (dialog)',
+                html: `<div style="background: #f0f6fb; border-radius: 12px; padding: 1.5rem 1.75rem; margin: 1.5rem 0px; border: 1px solid #c4d9ed; border-left: 5px solid #1a5276;">
+    <h3 style="margin: 0 0 .6rem; font-size: 1.3rem; color: #1a5276;">Quick Self-Check</h3>
+    <p style="color: #2c3e50;"><strong>1. </strong>Question text 1</p>
+    <div style="max-width: 220px;">
+        <ul style="list-style: none; margin: 0; padding: 0;" role="list">
+            <li><a class="btn btn-small" style="display: block; width: 100%; margin-bottom: 0.4rem; text-align: left; background-color: #1a5276; color: #ffffff; padding: 7px 14px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 600;" href="#q1_a" aria-haspopup="dialog">A. Option A</a></li>
+            <li><a class="btn btn-small" style="display: block; width: 100%; margin-bottom: 0.4rem; text-align: left; background-color: #1a5276; color: #ffffff; padding: 7px 14px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 600;" href="#q1_b" aria-haspopup="dialog">B. Option B</a></li>
+            <li><a class="btn btn-small" style="display: block; width: 100%; text-align: left; background-color: #1a5276; color: #ffffff; padding: 7px 14px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 600;" href="#q1_c" aria-haspopup="dialog">C. Option C</a></li>
+        </ul>
+        <div id="q1_a" class="enhanceable_content dialog" style="display: none; border-left: 6px solid #27ae60; background: #eafaf1; padding: 0.75rem 1rem;" title="Correct">
+            <p><span aria-hidden="true">✔️</span> <strong>Correct.</strong> Correct feedback text</p>
+        </div>
+        <div id="q1_b" class="enhanceable_content dialog" style="display: none; border-left: 6px solid #c0392b; background: #fdecea; padding: 0.75rem 1rem;" title="Incorrect">
+            <p><span aria-hidden="true">✖️</span> <strong>Incorrect.</strong> Incorrect feedback text</p>
+        </div>
+        <div id="q1_c" class="enhanceable_content dialog" style="display: none; border-left: 6px solid #c0392b; background: #fdecea; padding: 0.75rem 1rem;" title="Incorrect">
+            <p><span aria-hidden="true">✖️</span> <strong>Incorrect.</strong> Incorrect feedback text</p>
+        </div>
+    </div>
+    <p style="margin-top: 20px; color: #2c3e50;"><strong>2. </strong>Question text 2</p>
+    <div style="max-width: 220px;">
+        <ul style="list-style: none; margin: 0; padding: 0;" role="list">
+            <li><a class="btn btn-small" style="display: block; width: 100%; margin-bottom: 0.4rem; text-align: left; background-color: #1a5276; color: #ffffff; padding: 7px 14px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 600;" href="#q2_a" aria-haspopup="dialog">A. Option A</a></li>
+            <li><a class="btn btn-small" style="display: block; width: 100%; margin-bottom: 0.4rem; text-align: left; background-color: #1a5276; color: #ffffff; padding: 7px 14px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 600;" href="#q2_b" aria-haspopup="dialog">B. Option B</a></li>
+            <li><a class="btn btn-small" style="display: block; width: 100%; text-align: left; background-color: #1a5276; color: #ffffff; padding: 7px 14px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 600;" href="#q2_c" aria-haspopup="dialog">C. Option C</a></li>
+        </ul>
+        <div id="q2_a" class="enhanceable_content dialog" style="display: none; border-left: 6px solid #c0392b; background: #fdecea; padding: 0.75rem 1rem;" title="Incorrect">
+            <p><span aria-hidden="true">✖️</span> <strong>Incorrect.</strong> Incorrect feedback text</p>
+        </div>
+        <div id="q2_b" class="enhanceable_content dialog" style="display: none; border-left: 6px solid #27ae60; background: #eafaf1; padding: 0.75rem 1rem;" title="Correct">
+            <p><span aria-hidden="true">✔️</span> <strong>Correct.</strong> Correct feedback text</p>
+        </div>
+        <div id="q2_c" class="enhanceable_content dialog" style="display: none; border-left: 6px solid #c0392b; background: #fdecea; padding: 0.75rem 1rem;" title="Incorrect">
+            <p><span aria-hidden="true">✖️</span> <strong>Incorrect.</strong> Incorrect feedback text</p>
+        </div>
+    </div>
+</div>`
+              },
+              {
+                key: 'kcMCDetails',
+                name: 'KC — multiple choice (details)',
+                html: `<div style="max-width: 680px; margin: 24px auto; padding: 24px 28px; border-left: 5px solid #1a5276; background: #f0f6fb; border-radius: 8px;">
+    <h2 style="margin: 0 0 4px 0; font-size: 1.35rem; color: #1a5276;">Knowledge Check</h2>
+    <p style="margin: 0 0 20px 0; color: #2c3e50;">Select any answer choice to see if it's correct. Try comparing the feedback on all the options.</p>
+    <ol style="padding-left: 24px; margin: 0;">
+        <li style="margin-bottom: 22px;">
+            <p style="margin: 0 0 8px 0; color: #2c3e50;">Question text 1</p>
+            <details style="margin-bottom: 6px;">
+                <summary style="cursor: pointer; padding: 8px 14px; background-color: #ffffff; border: 1px solid #c4d9ed; border-radius: 6px; color: #2c3e50;">A. Option A</summary>
+                <div style="margin: 6px 0 0 0; padding: 10px 14px; background-color: #fdecea; border-left: 4px solid #c0392b; border-radius: 0 4px 4px 0;">
+                    <p style="margin: 0; color: #2c3e50;"><span aria-hidden="true">✖️</span> <strong>Incorrect.</strong> Feedback text for option A.</p>
+                </div>
+            </details>
+            <details style="margin-bottom: 6px;">
+                <summary style="cursor: pointer; padding: 8px 14px; background-color: #ffffff; border: 1px solid #c4d9ed; border-radius: 6px; color: #2c3e50;">B. Option B</summary>
+                <div style="margin: 6px 0 0 0; padding: 10px 14px; background-color: #eafaf1; border-left: 4px solid #27ae60; border-radius: 0 4px 4px 0;">
+                    <p style="margin: 0; color: #2c3e50;"><span aria-hidden="true">✔️</span> <strong>Correct.</strong> Feedback text for option B.</p>
+                </div>
+            </details>
+            <details>
+                <summary style="cursor: pointer; padding: 8px 14px; background-color: #ffffff; border: 1px solid #c4d9ed; border-radius: 6px; color: #2c3e50;">C. Option C</summary>
+                <div style="margin: 6px 0 0 0; padding: 10px 14px; background-color: #fdecea; border-left: 4px solid #c0392b; border-radius: 0 4px 4px 0;">
+                    <p style="margin: 0; color: #2c3e50;"><span aria-hidden="true">✖️</span> <strong>Incorrect.</strong> Feedback text for option C.</p>
+                </div>
+            </details>
+        </li>
+        <li>
+            <p style="margin: 0 0 8px 0; color: #2c3e50;">Question text 2</p>
+            <details style="margin-bottom: 6px;">
+                <summary style="cursor: pointer; padding: 8px 14px; background-color: #ffffff; border: 1px solid #c4d9ed; border-radius: 6px; color: #2c3e50;">A. Option A</summary>
+                <div style="margin: 6px 0 0 0; padding: 10px 14px; background-color: #eafaf1; border-left: 4px solid #27ae60; border-radius: 0 4px 4px 0;">
+                    <p style="margin: 0; color: #2c3e50;"><span aria-hidden="true">✔️</span> <strong>Correct.</strong> Feedback text for option A.</p>
+                </div>
+            </details>
+            <details style="margin-bottom: 6px;">
+                <summary style="cursor: pointer; padding: 8px 14px; background-color: #ffffff; border: 1px solid #c4d9ed; border-radius: 6px; color: #2c3e50;">B. Option B</summary>
+                <div style="margin: 6px 0 0 0; padding: 10px 14px; background-color: #fdecea; border-left: 4px solid #c0392b; border-radius: 0 4px 4px 0;">
+                    <p style="margin: 0; color: #2c3e50;"><span aria-hidden="true">✖️</span> <strong>Incorrect.</strong> Feedback text for option B.</p>
+                </div>
+            </details>
+            <details>
+                <summary style="cursor: pointer; padding: 8px 14px; background-color: #ffffff; border: 1px solid #c4d9ed; border-radius: 6px; color: #2c3e50;">C. Option C</summary>
+                <div style="margin: 6px 0 0 0; padding: 10px 14px; background-color: #fdecea; border-left: 4px solid #c0392b; border-radius: 0 4px 4px 0;">
+                    <p style="margin: 0; color: #2c3e50;"><span aria-hidden="true">✖️</span> <strong>Incorrect.</strong> Feedback text for option C.</p>
+                </div>
+            </details>
+        </li>
+    </ol>
+</div>`
+              },
             ]
           },
           {
@@ -822,6 +1042,231 @@
   </div>
   </div>
   </div>`
+              },
+              {
+                key: 'kcDialog',
+                name: 'KC — dialogs',
+                html: `<div style="max-width: 680px; margin: 24px auto; padding: 24px 28px; border-left: 5px solid #7c3a1a; background: #fdf6f1; border-radius: 8px;">
+    <h2 style="margin: 0 0 4px 0; font-size: 1.35rem; color: #7c3a1a;">Knowledge Check</h2>
+    <p style="margin: 0 0 20px 0; color: #3e2a1e;">Test yourself! Try to answer the questions below without scrolling back up the page. To see if your answer is correct, click on the button below each question.</p>
+    <ol style="padding-left: 24px; margin: 0;">
+        <li style="margin-bottom: 18px;">
+            <p style="margin: 0 0 8px 0; color: #3e2a1e;">Question text 1</p>
+            <div id="dialog_for_link1" class="enhanceable_content dialog" title="Answer">
+                <p>Answer 1 text</p>
+            </div>
+            <p style="margin: 0;"><a id="link1" class="Button" style="display: inline-block; background-color: #7c3a1a; color: #ffffff; padding: 7px 16px; border-radius: 6px; text-decoration: none; font-size: 0.9rem; font-weight: 600;" href="#dialog_for_link1">Check Your Answer #1</a></p>
+        </li>
+        <li style="margin-bottom: 18px;">
+            <p style="margin: 0 0 8px 0; color: #3e2a1e;">Question text 2</p>
+            <div id="dialog_for_link2" class="enhanceable_content dialog" title="Answer">
+                <p>Answer 2 text</p>
+            </div>
+            <p style="margin: 0;"><a id="link2" class="Button" style="display: inline-block; background-color: #7c3a1a; color: #ffffff; padding: 7px 16px; border-radius: 6px; text-decoration: none; font-size: 0.9rem; font-weight: 600;" href="#dialog_for_link2">Check Your Answer #2</a></p>
+        </li>
+        <li style="margin-bottom: 18px;">
+            <p style="margin: 0 0 8px 0; color: #3e2a1e;">Question text 3</p>
+            <div id="dialog_for_link3" class="enhanceable_content dialog" title="Answer">
+                <p>Answer 3 text</p>
+            </div>
+            <p style="margin: 0;"><a id="link3" class="Button" style="display: inline-block; background-color: #7c3a1a; color: #ffffff; padding: 7px 16px; border-radius: 6px; text-decoration: none; font-size: 0.9rem; font-weight: 600;" href="#dialog_for_link3">Check Your Answer #3</a></p>
+        </li>
+        <li style="margin-bottom: 18px;">
+            <p style="margin: 0 0 8px 0; color: #3e2a1e;">Question text 4</p>
+            <div id="dialog_for_link4" class="enhanceable_content dialog" title="Answer">
+                <p>Answer 4 text</p>
+            </div>
+            <p style="margin: 0;"><a id="link4" class="Button" style="display: inline-block; background-color: #7c3a1a; color: #ffffff; padding: 7px 16px; border-radius: 6px; text-decoration: none; font-size: 0.9rem; font-weight: 600;" href="#dialog_for_link4">Check Your Answer #4</a></p>
+        </li>
+        <li style="margin-bottom: 18px;">
+            <p style="margin: 0 0 8px 0; color: #3e2a1e;">Question text 5</p>
+            <div id="dialog_for_link5" class="enhanceable_content dialog" title="Answer">
+                <p>Answer 5 text</p>
+            </div>
+            <p style="margin: 0;"><a id="link5" class="Button" style="display: inline-block; background-color: #7c3a1a; color: #ffffff; padding: 7px 16px; border-radius: 6px; text-decoration: none; font-size: 0.9rem; font-weight: 600;" href="#dialog_for_link5">Check Your Answer #5</a></p>
+        </li>
+        <li style="margin-bottom: 18px;">
+            <p style="margin: 0 0 8px 0; color: #3e2a1e;">Question text 6</p>
+            <div id="dialog_for_link6" class="enhanceable_content dialog" title="Answer">
+                <p>Answer 6 text</p>
+            </div>
+            <p style="margin: 0;"><a id="link6" class="Button" style="display: inline-block; background-color: #7c3a1a; color: #ffffff; padding: 7px 16px; border-radius: 6px; text-decoration: none; font-size: 0.9rem; font-weight: 600;" href="#dialog_for_link6">Check Your Answer #6</a></p>
+        </li>
+        <li>
+            <p style="margin: 0 0 8px 0; color: #3e2a1e;">Question text 7</p>
+            <div id="dialog_for_link7" class="enhanceable_content dialog" title="Answer">
+                <p>Answer 7 text</p>
+            </div>
+            <p style="margin: 0;"><a id="link7" class="Button" style="display: inline-block; background-color: #7c3a1a; color: #ffffff; padding: 7px 16px; border-radius: 6px; text-decoration: none; font-size: 0.9rem; font-weight: 600;" href="#dialog_for_link7">Check Your Answer #7</a></p>
+        </li>
+    </ol>
+</div>`
+              },
+              {
+                key: 'kcDetails',
+                name: 'KC — details',
+                html: `<div style="max-width: 680px; margin: 24px auto; padding: 24px 28px; border-left: 5px solid #7c3a1a; background: #fdf6f1; border-radius: 8px;">
+    <h2 style="margin: 0 0 4px 0; font-size: 1.35rem; color: #7c3a1a;">Knowledge Check</h2>
+    <p style="margin: 0 0 20px 0; color: #3e2a1e;">Test yourself! Try to answer the questions below without scrolling back up the page. To reveal the answer, select the button beneath each question.</p>
+    <ol style="padding-left: 24px; margin: 0;">
+        <li style="margin-bottom: 18px;">
+            <p style="margin: 0 0 8px 0; color: #3e2a1e;">Question text 1</p>
+            <details>
+                <summary style="cursor: pointer; display: inline-block; list-style: none; background-color: #7c3a1a; color: #ffffff; padding: 7px 16px; border-radius: 6px; font-size: 0.9rem; font-weight: 600;">Check your answer</summary>
+                <div style="margin: 10px 0 0 0; padding: 12px 16px; background-color: #f8ebe2; border-left: 4px solid #c0612b; border-radius: 0 4px 4px 0;">
+                    <p style="margin: 0; color: #3e2a1e;">Answer 1 text</p>
+                </div>
+            </details>
+        </li>
+        <li style="margin-bottom: 18px;">
+            <p style="margin: 0 0 8px 0; color: #3e2a1e;">Question text 2</p>
+            <details>
+                <summary style="cursor: pointer; display: inline-block; list-style: none; background-color: #7c3a1a; color: #ffffff; padding: 7px 16px; border-radius: 6px; font-size: 0.9rem; font-weight: 600;">Check your answer</summary>
+                <div style="margin: 10px 0 0 0; padding: 12px 16px; background-color: #f8ebe2; border-left: 4px solid #c0612b; border-radius: 0 4px 4px 0;">
+                    <p style="margin: 0; color: #3e2a1e;">Answer 2 text</p>
+                </div>
+            </details>
+        </li>
+        <li style="margin-bottom: 18px;">
+            <p style="margin: 0 0 8px 0; color: #3e2a1e;">Question text 3</p>
+            <details>
+                <summary style="cursor: pointer; display: inline-block; list-style: none; background-color: #7c3a1a; color: #ffffff; padding: 7px 16px; border-radius: 6px; font-size: 0.9rem; font-weight: 600;">Check your answer</summary>
+                <div style="margin: 10px 0 0 0; padding: 12px 16px; background-color: #f8ebe2; border-left: 4px solid #c0612b; border-radius: 0 4px 4px 0;">
+                    <p style="margin: 0; color: #3e2a1e;">Answer 3 text</p>
+                </div>
+            </details>
+        </li>
+        <li style="margin-bottom: 18px;">
+            <p style="margin: 0 0 8px 0; color: #3e2a1e;">Question text 4</p>
+            <details>
+                <summary style="cursor: pointer; display: inline-block; list-style: none; background-color: #7c3a1a; color: #ffffff; padding: 7px 16px; border-radius: 6px; font-size: 0.9rem; font-weight: 600;">Check your answer</summary>
+                <div style="margin: 10px 0 0 0; padding: 12px 16px; background-color: #f8ebe2; border-left: 4px solid #c0612b; border-radius: 0 4px 4px 0;">
+                    <p style="margin: 0; color: #3e2a1e;">Answer 4 text</p>
+                </div>
+            </details>
+        </li>
+        <li style="margin-bottom: 18px;">
+            <p style="margin: 0 0 8px 0; color: #3e2a1e;">Question text 5</p>
+            <details>
+                <summary style="cursor: pointer; display: inline-block; list-style: none; background-color: #7c3a1a; color: #ffffff; padding: 7px 16px; border-radius: 6px; font-size: 0.9rem; font-weight: 600;">Check your answer</summary>
+                <div style="margin: 10px 0 0 0; padding: 12px 16px; background-color: #f8ebe2; border-left: 4px solid #c0612b; border-radius: 0 4px 4px 0;">
+                    <p style="margin: 0; color: #3e2a1e;">Answer 5 text</p>
+                </div>
+            </details>
+        </li>
+        <li style="margin-bottom: 18px;">
+            <p style="margin: 0 0 8px 0; color: #3e2a1e;">Question text 6</p>
+            <details>
+                <summary style="cursor: pointer; display: inline-block; list-style: none; background-color: #7c3a1a; color: #ffffff; padding: 7px 16px; border-radius: 6px; font-size: 0.9rem; font-weight: 600;">Check your answer</summary>
+                <div style="margin: 10px 0 0 0; padding: 12px 16px; background-color: #f8ebe2; border-left: 4px solid #c0612b; border-radius: 0 4px 4px 0;">
+                    <p style="margin: 0; color: #3e2a1e;">Answer 6 text</p>
+                </div>
+            </details>
+        </li>
+        <li>
+            <p style="margin: 0 0 8px 0; color: #3e2a1e;">Question text 7</p>
+            <details>
+                <summary style="cursor: pointer; display: inline-block; list-style: none; background-color: #7c3a1a; color: #ffffff; padding: 7px 16px; border-radius: 6px; font-size: 0.9rem; font-weight: 600;">Check your answer</summary>
+                <div style="margin: 10px 0 0 0; padding: 12px 16px; background-color: #f8ebe2; border-left: 4px solid #c0612b; border-radius: 0 4px 4px 0;">
+                    <p style="margin: 0; color: #3e2a1e;">Answer 7 text</p>
+                </div>
+            </details>
+        </li>
+    </ol>
+</div>`
+              },
+              {
+                key: 'kcMC',
+                name: 'KC — multiple choice (dialog)',
+                html: `<div style="background: #fdf6f1; border-radius: 12px; padding: 1.5rem 1.75rem; margin: 1.5rem 0px; border: 1px solid #e8d5c4; border-left: 5px solid #7c3a1a;">
+    <h3 style="margin: 0 0 .6rem; font-size: 1.3rem; color: #7c3a1a;">Quick Self-Check</h3>
+    <p style="color: #3e2a1e;"><strong>1. </strong>Question text 1</p>
+    <div style="max-width: 220px;">
+        <ul style="list-style: none; margin: 0; padding: 0;" role="list">
+            <li><a class="btn btn-small" style="display: block; width: 100%; margin-bottom: 0.4rem; text-align: left; background-color: #7c3a1a; color: #ffffff; padding: 7px 14px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 600;" href="#q1_a" aria-haspopup="dialog">A. Option A</a></li>
+            <li><a class="btn btn-small" style="display: block; width: 100%; margin-bottom: 0.4rem; text-align: left; background-color: #7c3a1a; color: #ffffff; padding: 7px 14px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 600;" href="#q1_b" aria-haspopup="dialog">B. Option B</a></li>
+            <li><a class="btn btn-small" style="display: block; width: 100%; text-align: left; background-color: #7c3a1a; color: #ffffff; padding: 7px 14px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 600;" href="#q1_c" aria-haspopup="dialog">C. Option C</a></li>
+        </ul>
+        <div id="q1_a" class="enhanceable_content dialog" style="display: none; border-left: 6px solid #27ae60; background: #eafaf1; padding: 0.75rem 1rem;" title="Correct">
+            <p><span aria-hidden="true">✔️</span> <strong>Correct.</strong> Correct feedback text</p>
+        </div>
+        <div id="q1_b" class="enhanceable_content dialog" style="display: none; border-left: 6px solid #c0392b; background: #fdecea; padding: 0.75rem 1rem;" title="Incorrect">
+            <p><span aria-hidden="true">✖️</span> <strong>Incorrect.</strong> Incorrect feedback text</p>
+        </div>
+        <div id="q1_c" class="enhanceable_content dialog" style="display: none; border-left: 6px solid #c0392b; background: #fdecea; padding: 0.75rem 1rem;" title="Incorrect">
+            <p><span aria-hidden="true">✖️</span> <strong>Incorrect.</strong> Incorrect feedback text</p>
+        </div>
+    </div>
+    <p style="margin-top: 20px; color: #3e2a1e;"><strong>2. </strong>Question text 2</p>
+    <div style="max-width: 220px;">
+        <ul style="list-style: none; margin: 0; padding: 0;" role="list">
+            <li><a class="btn btn-small" style="display: block; width: 100%; margin-bottom: 0.4rem; text-align: left; background-color: #7c3a1a; color: #ffffff; padding: 7px 14px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 600;" href="#q2_a" aria-haspopup="dialog">A. Option A</a></li>
+            <li><a class="btn btn-small" style="display: block; width: 100%; margin-bottom: 0.4rem; text-align: left; background-color: #7c3a1a; color: #ffffff; padding: 7px 14px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 600;" href="#q2_b" aria-haspopup="dialog">B. Option B</a></li>
+            <li><a class="btn btn-small" style="display: block; width: 100%; text-align: left; background-color: #7c3a1a; color: #ffffff; padding: 7px 14px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 600;" href="#q2_c" aria-haspopup="dialog">C. Option C</a></li>
+        </ul>
+        <div id="q2_a" class="enhanceable_content dialog" style="display: none; border-left: 6px solid #c0392b; background: #fdecea; padding: 0.75rem 1rem;" title="Incorrect">
+            <p><span aria-hidden="true">✖️</span> <strong>Incorrect.</strong> Incorrect feedback text</p>
+        </div>
+        <div id="q2_b" class="enhanceable_content dialog" style="display: none; border-left: 6px solid #27ae60; background: #eafaf1; padding: 0.75rem 1rem;" title="Correct">
+            <p><span aria-hidden="true">✔️</span> <strong>Correct.</strong> Correct feedback text</p>
+        </div>
+        <div id="q2_c" class="enhanceable_content dialog" style="display: none; border-left: 6px solid #c0392b; background: #fdecea; padding: 0.75rem 1rem;" title="Incorrect">
+            <p><span aria-hidden="true">✖️</span> <strong>Incorrect.</strong> Incorrect feedback text</p>
+        </div>
+    </div>
+</div>`
+              },
+              {
+                key: 'kcMCDetails',
+                name: 'KC — multiple choice (details)',
+                html: `<div style="max-width: 680px; margin: 24px auto; padding: 24px 28px; border-left: 5px solid #7c3a1a; background: #fdf6f1; border-radius: 8px;">
+    <h2 style="margin: 0 0 4px 0; font-size: 1.35rem; color: #7c3a1a;">Knowledge Check</h2>
+    <p style="margin: 0 0 20px 0; color: #3e2a1e;">Select any answer choice to see if it's correct. Try comparing the feedback on all the options.</p>
+    <ol style="padding-left: 24px; margin: 0;">
+        <li style="margin-bottom: 22px;">
+            <p style="margin: 0 0 8px 0; color: #3e2a1e;">Question text 1</p>
+            <details style="margin-bottom: 6px;">
+                <summary style="cursor: pointer; padding: 8px 14px; background-color: #ffffff; border: 1px solid #e8d5c4; border-radius: 6px; color: #3e2a1e;">A. Option A</summary>
+                <div style="margin: 6px 0 0 0; padding: 10px 14px; background-color: #fdecea; border-left: 4px solid #c0392b; border-radius: 0 4px 4px 0;">
+                    <p style="margin: 0; color: #3e2a1e;"><span aria-hidden="true">✖️</span> <strong>Incorrect.</strong> Feedback text for option A.</p>
+                </div>
+            </details>
+            <details style="margin-bottom: 6px;">
+                <summary style="cursor: pointer; padding: 8px 14px; background-color: #ffffff; border: 1px solid #e8d5c4; border-radius: 6px; color: #3e2a1e;">B. Option B</summary>
+                <div style="margin: 6px 0 0 0; padding: 10px 14px; background-color: #eafaf1; border-left: 4px solid #27ae60; border-radius: 0 4px 4px 0;">
+                    <p style="margin: 0; color: #3e2a1e;"><span aria-hidden="true">✔️</span> <strong>Correct.</strong> Feedback text for option B.</p>
+                </div>
+            </details>
+            <details>
+                <summary style="cursor: pointer; padding: 8px 14px; background-color: #ffffff; border: 1px solid #e8d5c4; border-radius: 6px; color: #3e2a1e;">C. Option C</summary>
+                <div style="margin: 6px 0 0 0; padding: 10px 14px; background-color: #fdecea; border-left: 4px solid #c0392b; border-radius: 0 4px 4px 0;">
+                    <p style="margin: 0; color: #3e2a1e;"><span aria-hidden="true">✖️</span> <strong>Incorrect.</strong> Feedback text for option C.</p>
+                </div>
+            </details>
+        </li>
+        <li>
+            <p style="margin: 0 0 8px 0; color: #3e2a1e;">Question text 2</p>
+            <details style="margin-bottom: 6px;">
+                <summary style="cursor: pointer; padding: 8px 14px; background-color: #ffffff; border: 1px solid #e8d5c4; border-radius: 6px; color: #3e2a1e;">A. Option A</summary>
+                <div style="margin: 6px 0 0 0; padding: 10px 14px; background-color: #eafaf1; border-left: 4px solid #27ae60; border-radius: 0 4px 4px 0;">
+                    <p style="margin: 0; color: #3e2a1e;"><span aria-hidden="true">✔️</span> <strong>Correct.</strong> Feedback text for option A.</p>
+                </div>
+            </details>
+            <details style="margin-bottom: 6px;">
+                <summary style="cursor: pointer; padding: 8px 14px; background-color: #ffffff; border: 1px solid #e8d5c4; border-radius: 6px; color: #3e2a1e;">B. Option B</summary>
+                <div style="margin: 6px 0 0 0; padding: 10px 14px; background-color: #fdecea; border-left: 4px solid #c0392b; border-radius: 0 4px 4px 0;">
+                    <p style="margin: 0; color: #3e2a1e;"><span aria-hidden="true">✖️</span> <strong>Incorrect.</strong> Feedback text for option B.</p>
+                </div>
+            </details>
+            <details>
+                <summary style="cursor: pointer; padding: 8px 14px; background-color: #ffffff; border: 1px solid #e8d5c4; border-radius: 6px; color: #3e2a1e;">C. Option C</summary>
+                <div style="margin: 6px 0 0 0; padding: 10px 14px; background-color: #fdecea; border-left: 4px solid #c0392b; border-radius: 0 4px 4px 0;">
+                    <p style="margin: 0; color: #3e2a1e;"><span aria-hidden="true">✖️</span> <strong>Incorrect.</strong> Feedback text for option C.</p>
+                </div>
+            </details>
+        </li>
+    </ol>
+</div>`
               },
             ]
           },
