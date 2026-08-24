@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name          Snippet Inserter
-// @version       2026.08.24
+// @version       2026.08.25
 // @namespace     CTLD
 // @description   Adds menu for inserting HTML snippets from the RCE.
 // @author        CTLD
@@ -123,7 +123,7 @@
         ]
       },
       {
-        group: 'Slate & Sky',
+        group: 'Cool Theme',
         snippets: [
           {
             name: 'Headings & dividers',
@@ -580,42 +580,48 @@
               {
                 key: 'kcMC',
                 name: 'KC — multiple choice (dialog)',
-                html: `<div style="background: #f0f6fb; border-radius: 12px; padding: 1.5rem 1.75rem; margin: 1.5rem 0px; border: 1px solid #c4d9ed; border-left: 5px solid #1a5276;">
+                html: `<div style="max-width: 680px; margin: 24px auto; padding: 24px 28px; border-left: 5px solid #1a5276; background: #f0f6fb; border-radius: 8px;">
     <h3 style="margin: 0 0 .6rem; font-size: 1.3rem; color: #1a5276;">Quick Self-Check</h3>
-    <p style="color: #2c3e50;"><strong>1. </strong>Question text 1</p>
-    <div style="max-width: 220px;">
-        <ul style="list-style: none; margin: 0; padding: 0;" role="list">
-            <li><a class="btn btn-small" style="display: block; width: 100%; margin-bottom: 0.4rem; text-align: left; background-color: #1a5276; color: #ffffff; padding: 7px 14px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 600;" href="#q1_a" aria-haspopup="dialog">A. Option A</a></li>
-            <li><a class="btn btn-small" style="display: block; width: 100%; margin-bottom: 0.4rem; text-align: left; background-color: #1a5276; color: #ffffff; padding: 7px 14px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 600;" href="#q1_b" aria-haspopup="dialog">B. Option B</a></li>
-            <li><a class="btn btn-small" style="display: block; width: 100%; text-align: left; background-color: #1a5276; color: #ffffff; padding: 7px 14px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 600;" href="#q1_c" aria-haspopup="dialog">C. Option C</a></li>
-        </ul>
-        <div id="q1_a" class="enhanceable_content dialog" style="display: none; border-left: 6px solid #27ae60; background: #eafaf1; padding: 0.75rem 1rem;" title="Correct">
-            <p><span aria-hidden="true">✔️</span> <strong>Correct.</strong> Correct feedback text</p>
-        </div>
-        <div id="q1_b" class="enhanceable_content dialog" style="display: none; border-left: 6px solid #c0392b; background: #fdecea; padding: 0.75rem 1rem;" title="Incorrect">
-            <p><span aria-hidden="true">✖️</span> <strong>Incorrect.</strong> Incorrect feedback text</p>
-        </div>
-        <div id="q1_c" class="enhanceable_content dialog" style="display: none; border-left: 6px solid #c0392b; background: #fdecea; padding: 0.75rem 1rem;" title="Incorrect">
-            <p><span aria-hidden="true">✖️</span> <strong>Incorrect.</strong> Incorrect feedback text</p>
-        </div>
-    </div>
-    <p style="margin-top: 20px; color: #2c3e50;"><strong>2. </strong>Question text 2</p>
-    <div style="max-width: 220px;">
-        <ul style="list-style: none; margin: 0; padding: 0;" role="list">
-            <li><a class="btn btn-small" style="display: block; width: 100%; margin-bottom: 0.4rem; text-align: left; background-color: #1a5276; color: #ffffff; padding: 7px 14px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 600;" href="#q2_a" aria-haspopup="dialog">A. Option A</a></li>
-            <li><a class="btn btn-small" style="display: block; width: 100%; margin-bottom: 0.4rem; text-align: left; background-color: #1a5276; color: #ffffff; padding: 7px 14px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 600;" href="#q2_b" aria-haspopup="dialog">B. Option B</a></li>
-            <li><a class="btn btn-small" style="display: block; width: 100%; text-align: left; background-color: #1a5276; color: #ffffff; padding: 7px 14px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 600;" href="#q2_c" aria-haspopup="dialog">C. Option C</a></li>
-        </ul>
-        <div id="q2_a" class="enhanceable_content dialog" style="display: none; border-left: 6px solid #c0392b; background: #fdecea; padding: 0.75rem 1rem;" title="Incorrect">
-            <p><span aria-hidden="true">✖️</span> <strong>Incorrect.</strong> Incorrect feedback text</p>
-        </div>
-        <div id="q2_b" class="enhanceable_content dialog" style="display: none; border-left: 6px solid #27ae60; background: #eafaf1; padding: 0.75rem 1rem;" title="Correct">
-            <p><span aria-hidden="true">✔️</span> <strong>Correct.</strong> Correct feedback text</p>
-        </div>
-        <div id="q2_c" class="enhanceable_content dialog" style="display: none; border-left: 6px solid #c0392b; background: #fdecea; padding: 0.75rem 1rem;" title="Incorrect">
-            <p><span aria-hidden="true">✖️</span> <strong>Incorrect.</strong> Incorrect feedback text</p>
-        </div>
-    </div>
+    <ol style="padding-left: 24px; margin: 0;">
+        <li style="margin-bottom: 22px;">
+            <p style="margin: 0 0 8px 0; color: #2c3e50;">Question text 1</p>
+            <div style="max-width: 220px;">
+                <ul style="list-style: none; margin: 0; padding: 0;" role="list">
+                    <li><a class="btn btn-small" style="display: block; width: 100%; margin-bottom: 0.4rem; text-align: left; background-color: #1a5276; color: #ffffff; padding: 7px 14px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 600;" href="#q1_a" aria-haspopup="dialog">A. Option A</a></li>
+                    <li><a class="btn btn-small" style="display: block; width: 100%; margin-bottom: 0.4rem; text-align: left; background-color: #1a5276; color: #ffffff; padding: 7px 14px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 600;" href="#q1_b" aria-haspopup="dialog">B. Option B</a></li>
+                    <li><a class="btn btn-small" style="display: block; width: 100%; text-align: left; background-color: #1a5276; color: #ffffff; padding: 7px 14px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 600;" href="#q1_c" aria-haspopup="dialog">C. Option C</a></li>
+                </ul>
+                <div id="q1_a" class="enhanceable_content dialog" style="display: none; border-left: 6px solid #27ae60; background: #eafaf1; padding: 0.75rem 1rem;" title="Correct">
+                    <p><span aria-hidden="true">✔️</span> <strong>Correct.</strong> Correct feedback text</p>
+                </div>
+                <div id="q1_b" class="enhanceable_content dialog" style="display: none; border-left: 6px solid #c0392b; background: #fdecea; padding: 0.75rem 1rem;" title="Incorrect">
+                    <p><span aria-hidden="true">✖️</span> <strong>Incorrect.</strong> Incorrect feedback text</p>
+                </div>
+                <div id="q1_c" class="enhanceable_content dialog" style="display: none; border-left: 6px solid #c0392b; background: #fdecea; padding: 0.75rem 1rem;" title="Incorrect">
+                    <p><span aria-hidden="true">✖️</span> <strong>Incorrect.</strong> Incorrect feedback text</p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <p style="margin: 0 0 8px 0; color: #2c3e50;">Question text 2</p>
+            <div style="max-width: 220px;">
+                <ul style="list-style: none; margin: 0; padding: 0;" role="list">
+                    <li><a class="btn btn-small" style="display: block; width: 100%; margin-bottom: 0.4rem; text-align: left; background-color: #1a5276; color: #ffffff; padding: 7px 14px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 600;" href="#q2_a" aria-haspopup="dialog">A. Option A</a></li>
+                    <li><a class="btn btn-small" style="display: block; width: 100%; margin-bottom: 0.4rem; text-align: left; background-color: #1a5276; color: #ffffff; padding: 7px 14px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 600;" href="#q2_b" aria-haspopup="dialog">B. Option B</a></li>
+                    <li><a class="btn btn-small" style="display: block; width: 100%; text-align: left; background-color: #1a5276; color: #ffffff; padding: 7px 14px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 600;" href="#q2_c" aria-haspopup="dialog">C. Option C</a></li>
+                </ul>
+                <div id="q2_a" class="enhanceable_content dialog" style="display: none; border-left: 6px solid #c0392b; background: #fdecea; padding: 0.75rem 1rem;" title="Incorrect">
+                    <p><span aria-hidden="true">✖️</span> <strong>Incorrect.</strong> Incorrect feedback text</p>
+                </div>
+                <div id="q2_b" class="enhanceable_content dialog" style="display: none; border-left: 6px solid #27ae60; background: #eafaf1; padding: 0.75rem 1rem;" title="Correct">
+                    <p><span aria-hidden="true">✔️</span> <strong>Correct.</strong> Correct feedback text</p>
+                </div>
+                <div id="q2_c" class="enhanceable_content dialog" style="display: none; border-left: 6px solid #c0392b; background: #fdecea; padding: 0.75rem 1rem;" title="Incorrect">
+                    <p><span aria-hidden="true">✖️</span> <strong>Incorrect.</strong> Incorrect feedback text</p>
+                </div>
+            </div>
+        </li>
+    </ol>
 </div>`
               },
               {
@@ -721,7 +727,7 @@
         ]
       },
       {
-        group: 'Clay & Ember',
+        group: 'Warm Theme',
         snippets: [
           {
             name: 'Headings & dividers',
@@ -1178,42 +1184,48 @@
               {
                 key: 'kcMC',
                 name: 'KC — multiple choice (dialog)',
-                html: `<div style="background: #fdf6f1; border-radius: 12px; padding: 1.5rem 1.75rem; margin: 1.5rem 0px; border: 1px solid #e8d5c4; border-left: 5px solid #7c3a1a;">
+                html: `<div style="max-width: 680px; margin: 24px auto; padding: 24px 28px; border-left: 5px solid #7c3a1a; background: #fdf6f1; border-radius: 8px;">
     <h3 style="margin: 0 0 .6rem; font-size: 1.3rem; color: #7c3a1a;">Quick Self-Check</h3>
-    <p style="color: #3e2a1e;"><strong>1. </strong>Question text 1</p>
-    <div style="max-width: 220px;">
-        <ul style="list-style: none; margin: 0; padding: 0;" role="list">
-            <li><a class="btn btn-small" style="display: block; width: 100%; margin-bottom: 0.4rem; text-align: left; background-color: #7c3a1a; color: #ffffff; padding: 7px 14px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 600;" href="#q1_a" aria-haspopup="dialog">A. Option A</a></li>
-            <li><a class="btn btn-small" style="display: block; width: 100%; margin-bottom: 0.4rem; text-align: left; background-color: #7c3a1a; color: #ffffff; padding: 7px 14px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 600;" href="#q1_b" aria-haspopup="dialog">B. Option B</a></li>
-            <li><a class="btn btn-small" style="display: block; width: 100%; text-align: left; background-color: #7c3a1a; color: #ffffff; padding: 7px 14px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 600;" href="#q1_c" aria-haspopup="dialog">C. Option C</a></li>
-        </ul>
-        <div id="q1_a" class="enhanceable_content dialog" style="display: none; border-left: 6px solid #27ae60; background: #eafaf1; padding: 0.75rem 1rem;" title="Correct">
-            <p><span aria-hidden="true">✔️</span> <strong>Correct.</strong> Correct feedback text</p>
-        </div>
-        <div id="q1_b" class="enhanceable_content dialog" style="display: none; border-left: 6px solid #c0392b; background: #fdecea; padding: 0.75rem 1rem;" title="Incorrect">
-            <p><span aria-hidden="true">✖️</span> <strong>Incorrect.</strong> Incorrect feedback text</p>
-        </div>
-        <div id="q1_c" class="enhanceable_content dialog" style="display: none; border-left: 6px solid #c0392b; background: #fdecea; padding: 0.75rem 1rem;" title="Incorrect">
-            <p><span aria-hidden="true">✖️</span> <strong>Incorrect.</strong> Incorrect feedback text</p>
-        </div>
-    </div>
-    <p style="margin-top: 20px; color: #3e2a1e;"><strong>2. </strong>Question text 2</p>
-    <div style="max-width: 220px;">
-        <ul style="list-style: none; margin: 0; padding: 0;" role="list">
-            <li><a class="btn btn-small" style="display: block; width: 100%; margin-bottom: 0.4rem; text-align: left; background-color: #7c3a1a; color: #ffffff; padding: 7px 14px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 600;" href="#q2_a" aria-haspopup="dialog">A. Option A</a></li>
-            <li><a class="btn btn-small" style="display: block; width: 100%; margin-bottom: 0.4rem; text-align: left; background-color: #7c3a1a; color: #ffffff; padding: 7px 14px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 600;" href="#q2_b" aria-haspopup="dialog">B. Option B</a></li>
-            <li><a class="btn btn-small" style="display: block; width: 100%; text-align: left; background-color: #7c3a1a; color: #ffffff; padding: 7px 14px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 600;" href="#q2_c" aria-haspopup="dialog">C. Option C</a></li>
-        </ul>
-        <div id="q2_a" class="enhanceable_content dialog" style="display: none; border-left: 6px solid #c0392b; background: #fdecea; padding: 0.75rem 1rem;" title="Incorrect">
-            <p><span aria-hidden="true">✖️</span> <strong>Incorrect.</strong> Incorrect feedback text</p>
-        </div>
-        <div id="q2_b" class="enhanceable_content dialog" style="display: none; border-left: 6px solid #27ae60; background: #eafaf1; padding: 0.75rem 1rem;" title="Correct">
-            <p><span aria-hidden="true">✔️</span> <strong>Correct.</strong> Correct feedback text</p>
-        </div>
-        <div id="q2_c" class="enhanceable_content dialog" style="display: none; border-left: 6px solid #c0392b; background: #fdecea; padding: 0.75rem 1rem;" title="Incorrect">
-            <p><span aria-hidden="true">✖️</span> <strong>Incorrect.</strong> Incorrect feedback text</p>
-        </div>
-    </div>
+    <ol style="padding-left: 24px; margin: 0;">
+        <li style="margin-bottom: 22px;">
+            <p style="margin: 0 0 8px 0; color: #3e2a1e;">Question text 1</p>
+            <div style="max-width: 220px;">
+                <ul style="list-style: none; margin: 0; padding: 0;" role="list">
+                    <li><a class="btn btn-small" style="display: block; width: 100%; margin-bottom: 0.4rem; text-align: left; background-color: #7c3a1a; color: #ffffff; padding: 7px 14px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 600;" href="#q1_a" aria-haspopup="dialog">A. Option A</a></li>
+                    <li><a class="btn btn-small" style="display: block; width: 100%; margin-bottom: 0.4rem; text-align: left; background-color: #7c3a1a; color: #ffffff; padding: 7px 14px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 600;" href="#q1_b" aria-haspopup="dialog">B. Option B</a></li>
+                    <li><a class="btn btn-small" style="display: block; width: 100%; text-align: left; background-color: #7c3a1a; color: #ffffff; padding: 7px 14px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 600;" href="#q1_c" aria-haspopup="dialog">C. Option C</a></li>
+                </ul>
+                <div id="q1_a" class="enhanceable_content dialog" style="display: none; border-left: 6px solid #27ae60; background: #eafaf1; padding: 0.75rem 1rem;" title="Correct">
+                    <p><span aria-hidden="true">✔️</span> <strong>Correct.</strong> Correct feedback text</p>
+                </div>
+                <div id="q1_b" class="enhanceable_content dialog" style="display: none; border-left: 6px solid #c0392b; background: #fdecea; padding: 0.75rem 1rem;" title="Incorrect">
+                    <p><span aria-hidden="true">✖️</span> <strong>Incorrect.</strong> Incorrect feedback text</p>
+                </div>
+                <div id="q1_c" class="enhanceable_content dialog" style="display: none; border-left: 6px solid #c0392b; background: #fdecea; padding: 0.75rem 1rem;" title="Incorrect">
+                    <p><span aria-hidden="true">✖️</span> <strong>Incorrect.</strong> Incorrect feedback text</p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <p style="margin: 0 0 8px 0; color: #3e2a1e;">Question text 2</p>
+            <div style="max-width: 220px;">
+                <ul style="list-style: none; margin: 0; padding: 0;" role="list">
+                    <li><a class="btn btn-small" style="display: block; width: 100%; margin-bottom: 0.4rem; text-align: left; background-color: #7c3a1a; color: #ffffff; padding: 7px 14px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 600;" href="#q2_a" aria-haspopup="dialog">A. Option A</a></li>
+                    <li><a class="btn btn-small" style="display: block; width: 100%; margin-bottom: 0.4rem; text-align: left; background-color: #7c3a1a; color: #ffffff; padding: 7px 14px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 600;" href="#q2_b" aria-haspopup="dialog">B. Option B</a></li>
+                    <li><a class="btn btn-small" style="display: block; width: 100%; text-align: left; background-color: #7c3a1a; color: #ffffff; padding: 7px 14px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; font-weight: 600;" href="#q2_c" aria-haspopup="dialog">C. Option C</a></li>
+                </ul>
+                <div id="q2_a" class="enhanceable_content dialog" style="display: none; border-left: 6px solid #c0392b; background: #fdecea; padding: 0.75rem 1rem;" title="Incorrect">
+                    <p><span aria-hidden="true">✖️</span> <strong>Incorrect.</strong> Incorrect feedback text</p>
+                </div>
+                <div id="q2_b" class="enhanceable_content dialog" style="display: none; border-left: 6px solid #27ae60; background: #eafaf1; padding: 0.75rem 1rem;" title="Correct">
+                    <p><span aria-hidden="true">✔️</span> <strong>Correct.</strong> Correct feedback text</p>
+                </div>
+                <div id="q2_c" class="enhanceable_content dialog" style="display: none; border-left: 6px solid #c0392b; background: #fdecea; padding: 0.75rem 1rem;" title="Incorrect">
+                    <p><span aria-hidden="true">✖️</span> <strong>Incorrect.</strong> Incorrect feedback text</p>
+                </div>
+            </div>
+        </li>
+    </ol>
 </div>`
               },
               {
