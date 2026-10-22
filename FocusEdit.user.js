@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Focus Edit (testing)
+// @name         Focus Edit
 // @namespace    CTLD
 // @version      2026.09.16
 // @description  Distraction-free full-width Canvas editor. Auto-enters on edit pages, hides Canvas chrome, keeps the title/options/Save controls intact, and auto-exits when you Save (the saved view is a non-edit URL). Floating toggle to bail back to normal Canvas; registers with Canvas Toolbar if present.
