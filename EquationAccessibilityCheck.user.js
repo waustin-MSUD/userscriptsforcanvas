@@ -4,7 +4,7 @@
 // @namespace     CTLD
 // @description   Detect Canvas equation images missing plain-language aria-labels, and offer to fix them. Registers with the Canvas Toolbar System.
 // @author        CTLD
-// @updateurl     https://raw.githubusercontent.com/waustin-MSUD/userscriptsforcanvas/refs/heads/main/EquationAccessibility.user.js
+// @updateurl     https://raw.githubusercontent.com/waustin-MSUD/userscriptsforcanvas/refs/heads/main/EquationAccessibilityCheck.user.js
 // @icon          https://du11hjcvx0uqb.cloudfront.net/br/dist/images/favicon-e10d657a73.ico
 // @match         https://*.instructure.com/courses/*
 // @grant         GM_addStyle
