@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name          NavBar Indicator
-// @version       2026.11.18
+// @version       2026.11.19
 // @namespace     CTLD
 // @description   Recolors the Canvas global navigation and adds vertical text to flag companion / sandbox / development shells.
 // @author        CTLD
@@ -68,8 +68,8 @@
     (document.head || document.documentElement).appendChild(style);
   }
 
-  // Vertical label centered in the empty middle of the (full-height, fixed)
-  // global nav. pointer-events: none so it never blocks a nav click.
+  // Vertical label sitting just above the bottom icon group of the (full-height,
+  // fixed) global nav. pointer-events: none so it never blocks a nav click.
   function addLabel(text) {
     const header = document.querySelector('#header.ic-app-header, #header, .ic-app-header');
     if (!header) return false;
@@ -80,10 +80,9 @@
     wrap.setAttribute('aria-hidden', 'true');
     Object.assign(wrap.style, {
       position: 'absolute',
-      top: '70%',
       left: '0',
       right: '0',
-      transform: 'translateY(-50%)',
+      bottom: '64px', // refined by placeLabel()
       display: 'flex',
       justifyContent: 'center',
       pointerEvents: 'none',
@@ -99,15 +98,52 @@
       textOrientation: 'upright',
       color: 'rgba(255, 255, 255, 0.92)',
       fontWeight: '700',
-      fontSize: '24px',
+      fontSize: '22px', // refined by placeLabel()
       letterSpacing: '0.05em',
       textTransform: 'uppercase',
       whiteSpace: 'nowrap',
+      lineHeight: '1',
     });
 
     wrap.appendChild(span);
     header.appendChild(wrap);
+
+    placeLabel(header, wrap, span);
+
+    // Re-fit on viewport changes (rAF-throttled).
+    let raf = 0;
+    window.addEventListener('resize', () => {
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(() => placeLabel(header, wrap, span));
+    });
+
     return true;
+  }
+
+  // Anchor the label just above the nav's bottom toggle icon (#primaryNavToggle),
+  // and shrink the font so the stacked word fits the gap between the main icons
+  // and that toggle. Falls back to sensible offsets if the elements are absent.
+  function placeLabel(header, wrap, span) {
+    const MAX = 22, MIN = 11;
+    const toggle = document.getElementById('primaryNavToggle'); // bottom icon
+    const menu = header.querySelector('#menu, .ic-app-header__main-navigation');
+    const hr = header.getBoundingClientRect();
+    const anchorTop = toggle ? toggle.getBoundingClientRect().top : hr.bottom - 56;
+    const menuBottom = menu ? menu.getBoundingClientRect().bottom : hr.top + 160;
+
+    // Sit just above the bottom toggle icon.
+    wrap.style.bottom = Math.round(hr.bottom - anchorTop + 12) + 'px';
+
+    // Available vertical room between the main icons and the toggle.
+    const avail = Math.max(44, anchorTop - menuBottom - 16);
+
+    // Measure at MAX, then scale proportionally to fit (one step is accurate
+    // since rendered height tracks font-size linearly).
+    span.style.fontSize = MAX + 'px';
+    const h = span.getBoundingClientRect().height;
+    if (h > avail) {
+      span.style.fontSize = Math.max(MIN, Math.floor(MAX * avail / h)) + 'px';
+    }
   }
 
   // Global nav is core chrome and usually present at load, but poll briefly in
