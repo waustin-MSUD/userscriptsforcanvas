@@ -3,7 +3,7 @@
 // @namespace    CTLD
 // @version      2026.09.16
 // @description  Distraction-free full-width Canvas editor. Auto-enters on edit pages, hides Canvas chrome, keeps the title/options/Save controls intact, and auto-exits when you Save (the saved view is a non-edit URL). Floating toggle to bail back to normal Canvas; registers with Canvas Toolbar if present.
-// @author       CTLD / MSU Denver
+// @author       CTLD
 // @updateurl     https://raw.githubusercontent.com/waustin-MSUD/userscriptsforcanvas/refs/heads/main/FocusEdit.user.js
 // @icon          https://du11hjcvx0uqb.cloudfront.net/br/dist/images/favicon-e10d657a73.ico
 // @match        https://msudenver.instructure.com/*
