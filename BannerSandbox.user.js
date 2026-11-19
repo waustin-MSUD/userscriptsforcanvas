@@ -46,7 +46,7 @@
         // the gradient leaves off and fades to transparent.
         background: `linear-gradient(to bottom, ${BANNER_COLOR}, color-mix(in srgb, ${BANNER_COLOR} 75%, black))`,
         boxShadow: '0 3px 8px rgba(0, 0, 0, 0.22)',
-        color: 'white',
+        color: 'DimGray',
         textAlign: 'center',
         fontSize: '1.2em',
         fontWeight: 'bold',
