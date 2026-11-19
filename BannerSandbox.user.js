@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name          Banner for Sandbox Shells
-// @version       2026.11.18
+// @version       2026.11.19
 // @namespace     CTLD
 // @description   Display a banner at the top of Sandbox Shells
 // @author        CTLD
