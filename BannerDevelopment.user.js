@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name          Banner for Development Shells
-// @version       2026.05.15
+// @version       2026.11.18
 // @namespace     CTLD
 // @description   Display a banner at the top of Development Shells
 // @author        CTLD
@@ -12,6 +12,10 @@
 
 (function () {
   'use strict';
+
+  // Single color knob — the gradient's dark end and the shadow are derived
+  // from this, so the sandbox/dev variants only need this one line changed.
+  const BANNER_COLOR = 'Crimson';
 
   const courseRegex = /^\/courses\/(\d+)/;
   const match = courseRegex.exec(location.pathname);
@@ -26,10 +30,11 @@
     .then(course => {
       if (!course?.name || !/development/i.test(course.name)) return;
 
-      if (document.getElementById('dev-banner')) return;
+      // Avoid inserting multiple times
+      if (document.getElementById('development-banner')) return;
 
       const banner = document.createElement('div');
-      banner.id = 'dev-banner';
+      banner.id = 'development-banner';
       banner.textContent = '🚧 Development Course Shell 🚧';
 
       Object.assign(banner.style, {
@@ -37,7 +42,10 @@
         top: '0',
         left: '0',
         width: '100%',
-        backgroundColor: 'Crimson',
+        // Gradient darkens toward the bottom edge; the shadow picks up where
+        // the gradient leaves off and fades to transparent.
+        background: `linear-gradient(to bottom, ${BANNER_COLOR}, color-mix(in srgb, ${BANNER_COLOR} 75%, black))`,
+        boxShadow: '0 3px 8px rgba(0, 0, 0, 0.22)',
         color: 'white',
         textAlign: 'center',
         fontSize: '1.2em',
@@ -48,23 +56,29 @@
         userSelect: 'none'
       });
 
+      // Extra protection to avoid editor capturing it
       banner.setAttribute('data-no-editor', 'true');
       banner.setAttribute('aria-hidden', 'true');
 
+      // Append banner safely
       waitForSafeInjection(() => {
         document.body.appendChild(banner);
+
+        // Avoid overlapping content
         if (!document.body.style.paddingTop) {
           document.body.style.paddingTop = '40px';
         }
       });
     });
 
+  // Wait until we're sure the RCE/DOM is fully stable before injecting
   function waitForSafeInjection(callback) {
     const interval = setInterval(() => {
-      const rce = document.querySelector('#content .tox-edit-area, iframe.tox-edit-area, .note-editor');
+      const rce = document.querySelector('#content .tox-edit-area, iframe.tox-edit-area, .note-editor'); // Common RCE containers
       const contentArea = document.querySelector('#content');
       const layoutMain = document.querySelector('.ic-Layout-contentMain');
 
+      // Wait until edit fields and content areas are present, so we can avoid them
       if (contentArea || rce || layoutMain) {
         clearInterval(interval);
         callback();
