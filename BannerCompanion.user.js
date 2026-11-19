@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name          Banner for Companion Shells
-// @version       2026.05.15
+// @version       2026.11.18
 // @namespace     CTLD
 // @description   Display a banner at the top of Companion Shells
 // @author        CTLD
@@ -12,6 +12,10 @@
 
 (function () {
   'use strict';
+
+  // Single color knob — the gradient's dark end and the shadow are derived
+  // from this, so the sandbox/dev variants only need this one line changed.
+  const BANNER_COLOR = 'MediumSeaGreen';
 
   const courseRegex = /^\/courses\/(\d+)/;
   const match = courseRegex.exec(location.pathname);
@@ -38,7 +42,10 @@
         top: '0',
         left: '0',
         width: '100%',
-        backgroundColor: 'MediumSeaGreen',
+        // Gradient darkens toward the bottom edge; the shadow picks up where
+        // the gradient leaves off and fades to transparent.
+        background: `linear-gradient(to bottom, ${BANNER_COLOR}, color-mix(in srgb, ${BANNER_COLOR} 75%, black))`,
+        boxShadow: '0 3px 8px rgba(0, 0, 0, 0.22)',
         color: 'white',
         textAlign: 'center',
         fontSize: '1.2em',
