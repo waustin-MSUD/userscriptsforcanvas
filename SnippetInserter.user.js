@@ -44,7 +44,7 @@
           {
             key: 'video',
             name: '🎥 Video Placeholder',
-            html: `<h2>Video: Title</h2><p>Video length: xx:xx, CC available</p><p><iframe title="#" src="https://www.youtube.com/embed/oznr-1-poSU" width="560" height="315" loading="lazy" allowfullscreen="allowfullscreen" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" data-mce-fragment="1"></iframe></p>`
+            html: `<h2>Video: Title</h2><p>Video length: xx:xx, CC available</p><p><iframe title="#" src="https://www.youtube.com/embed/oznr-1-poSU" width="560" height="315" loading="lazy" allowfullscreen="allowfullscreen" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" data-mce-fragment="1"></iframe><p style="font-size: 0.9em;">Source: Channel Name (Year), via <a href="https://www.youtube.com/watch?v=XXXXXXXXXXX">YouTube</a>. Standard YouTube License.</p></p>`
           },
           {
             key: 'hrThick',
