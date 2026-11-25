@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name          Snippet Inserter
-// @version       2026.08.27
+// @version       2026.11.25
 // @namespace     CTLD
 // @description   Adds menu for inserting HTML snippets from the RCE.
 // @author        CTLD
